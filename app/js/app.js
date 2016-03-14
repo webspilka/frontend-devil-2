@@ -1,1 +1,3 @@
-console.log('Hell Yeah!');
+import { bar } from './foo';
+
+bar();

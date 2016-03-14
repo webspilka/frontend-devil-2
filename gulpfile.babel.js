@@ -20,10 +20,7 @@ gulp.task('clean', Clean.delete);
 gulp.task('build', ['images:build', 'js:build', 'style:build', 'html:build', 'fonts:build']);
 
 gulp.task('watch', () => {
-    gulp.watch(path.all.js, () => {
-        gulp.start('js:lint');
-        Js.watch();
-    });
+    gulp.watch(path.all.js, ['js:build']);
     gulp.watch(path.all.style, ['style:build']);
     gulp.watch(path.all.template, ['html:build']);
     gulp.watch(path.all.fonts, ['fonts:build']);
