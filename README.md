@@ -9,7 +9,8 @@
 - Automagically lint your scripts
 - Map compiled CSS to source stylesheets with source maps
 - Image optimization
-- ES2015 features by using Babel && Browserify
+- ES2015 features by using Babel
+- ES6 Modules && Tree-Shaking with [rollup.js](http://rollupjs.org/)
 - Multiple bundles
 - JADE templates
 - Errors notification
