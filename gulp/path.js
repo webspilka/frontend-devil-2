@@ -9,8 +9,15 @@ export default {
         style: [`./${ srcDir }/style/app.sass`],
         js: [`./${ srcDir }/js/app.js`]
     },
+    vendor: {
+        js: [
+            './node_modules/jquery/dist/jquery.js',
+            './node_modules/lodash/lodash.js'
+        ]
+    },
     all: {
-        template: `${ srcDir }/templates/**/*.jade`,
+        html: `${ srcDir }/*.jade`,
+        template: `${ srcDir }/**/*.jade`,
         js: `${ srcDir }/js/**/*.js`,
         style: `${ srcDir }/style/**/*.sass`,
         fonts: [`${ srcDir }/fonts/**/*.*`],
@@ -19,7 +26,7 @@ export default {
     dest: {
         js: `${ publicDir }/js`,
         style: `${ publicDir }/css`,
-        html: `${ publicDir }/templates`,
+        html: `${ publicDir }/`,
         fonts: `${ publicDir }/fonts`,
         images: `${ publicDir }/images`
     },

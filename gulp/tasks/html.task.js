@@ -18,7 +18,7 @@ class Html {
      * @returns {*}
      */
     static build() {
-        return gulp.src(path.all.template)
+        return gulp.src(path.all.html)
                 .pipe($.plumber(config.plumber))
                 .pipe($.jade(config.jade))
                 .pipe(gulp.dest(path.dest.html))

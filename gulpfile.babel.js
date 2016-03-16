@@ -11,13 +11,14 @@ import Clean from './gulp/tasks/clean.task';
 
 gulp.task('js:lint', Js.lint);
 gulp.task('js:build', ['js:lint'], Js.build);
+gulp.task('js:vendor', Js.vendor);
 gulp.task('style:build', Css.build);
 gulp.task('html:build', Html.build);
 gulp.task('fonts:build', Fonts.build);
 gulp.task('images:build', Images.build);
 
 gulp.task('clean', Clean.delete);
-gulp.task('build', ['images:build', 'js:build', 'style:build', 'html:build', 'fonts:build']);
+gulp.task('build', ['images:build', 'js:vendor', 'js:build', 'style:build', 'html:build', 'fonts:build']);
 
 gulp.task('watch', () => {
     gulp.watch(path.all.js, ['js:build']);

@@ -1,16 +1,26 @@
 import { errorHandler } from './helpers';
+import babel from 'rollup-plugin-babel';
 
 /**
  * Plugins settings
  */
 export default {
 
-    //  https://www.npmjs.com/package/browserify
-    //  don't use 'entries' property in this section. Include you entries in path.entries
-    browserify: {
-        debug: true,
-        plugins: ['watchify'],
-        transform: ['babelify']
+    // https://www.npmjs.com/package/rollup
+    rollup: {
+        format: 'es6',
+        sourceMap: true,
+        onwarn: (error) => {
+            throw new Error(error);
+        },
+        plugins: [
+            // https://github.com/rollup/rollup-plugin-babel
+            babel({
+                presets: ['es2015-rollup'],
+                babelrc: false,
+                exclude: 'node_modules/**'
+            })
+        ]
     },
 
     //  https://www.npmjs.com/package/gulp-sass

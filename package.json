@@ -10,10 +10,12 @@
     "babel": "^6.5.2",
     "babel-core": "^6.4.5",
     "babel-preset-es2015": "^6.3.13",
+    "babel-preset-es2015-rollup": "^1.1.1",
     "del": "^2.2.0",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-babel": "^6.1.1",
+    "gulp-concat": "^2.6.0",
     "gulp-imagemin": "^2.4.0",
     "gulp-jade": "^1.1.0",
     "gulp-jshint": "^2.0.0",
@@ -30,5 +32,9 @@
     "jshint": "^2.9.1",
     "jshint-stylish": "^2.1.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap-sass": "^3.3.6",
+    "jquery": "^2.2.1",
+    "lodash": "^4.6.1"
+  }
 }
