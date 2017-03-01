@@ -4,7 +4,7 @@
 
 import notify from 'gulp-notify';
 
-export function errorHandler(...args) {
+export function errorHandler(args) {
     notify.onError({
         title: 'Compile Error',
         message: '<%= error.message %>'
